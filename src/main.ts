@@ -1,4 +1,4 @@
-import { app, BrowserWindow, session } from 'electron';
+import { app, BrowserWindow, session, ipcMain } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
 import * as fs from 'fs';
@@ -35,6 +35,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     title: `MCSR Starter v${appVersion}`,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       webSecurity: true,

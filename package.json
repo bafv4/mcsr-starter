@@ -1,8 +1,8 @@
 {
   "name": "mcsr-starter",
-  "productName": "mcsr-starter",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "productName": "MCSR Starter",
+  "version": "0.0.1",
+  "description": "A tool to assist in the installation and configuration of MCSR, including MultiMC (instances), tools, and mods etc.",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -34,9 +34,13 @@
     "electron": "36.1.0",
     "eslint": "^9.26.0",
     "eslint-plugin-import": "^2.31.0",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.87.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.8.3",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vue-router": "^4.5.1"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",

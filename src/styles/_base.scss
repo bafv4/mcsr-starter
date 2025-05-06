@@ -1,0 +1,41 @@
+// _base.scss: global styles
+
+:root {
+    --primary-color: #12487a;
+    --primary-color-hover: #29649c;
+    --secondary-color: #c9c9c9;
+    --secondary-color-hover: #dddddd;
+    --bg-color: #f0f0f0;
+    --highlight-bg-color: #e2e2e2;
+    --font-color: #181818;
+    --highlight-font-color: #350e0e;
+    --font-family: 'Segoe UI', 'Meiryo', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #3b6c9b;
+        --primary-color-hover: #275077;
+        --secondary-color: #5e5e5e;
+        --secondary-color-hover: #3a3a3a;
+        --bg-color: #202020;
+        --highlight-bg-color: #181818;
+        --font-color: #f0f0f0;
+        --highlight-font-color: #792020;
+    }
+}
+
+* {
+    margin: .25em;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    user-select: none;
+    padding: .5em;
+    overflow: hidden;
+}
