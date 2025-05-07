@@ -1,4 +1,4 @@
-import { app, BrowserWindow, session, ipcMain } from 'electron';
+import { app, BrowserWindow, session, ipcMain, dialog } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
 import * as fs from 'fs';
@@ -74,3 +74,12 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+// フォルダ選択用
+ipcMain.handle('select-dest', async () => {
+  const result = await dialog.showOpenDialog(BrowserWindow.getFocusedWindow()!, {
+    properties: ['openDirectory', 'createDirectory']
+  });
+  if (result.canceled) return null;
+  return result.filePaths[0];
+});

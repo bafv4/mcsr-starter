@@ -1,12 +1,14 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-    primary?: boolean;
-    inline?: boolean;
+    primary?: boolean,
+    inline?: boolean,
     width?: number | string,
+    disable?: boolean,
 }>(), {
     primary: false,
     inline: false,
     width: 100,
+    disabled: false,
 });
 
 const emit = defineEmits<{
@@ -19,7 +21,7 @@ const onClick = () => {
 </script>
 
 <template>
-    <button :class="['mss-button', { 'primary': primary }, { 'inline': inline },]" :style="{ width: width + 'px' }" @click="onClick"> >
+    <button class="mss-button" v-bind:class="{primary: primary, inline: inline, disabled: disable}" :style="{ width: width + 'px' }" @click="onClick">
         <slot></slot>
     </button>
 </template>
@@ -42,17 +44,25 @@ const onClick = () => {
     background-color: $secondary-color-hover;
 }
 
-.mss-button.primary {
+.primary {
     background-color: $primary-color;
     color: #f0f0f0;
 }
 
-.mss-button.primary:hover {
+.primary:hover {
     background-color: $primary-color-hover;
 }
 
-.mss-button.inline {
+.inline {
     display: inline-block;
     margin-right: 1em;
+}
+
+.disabled {
+    cursor: default;
+}
+
+.disabled:hover {
+    background-color: $primary-color;
 }
 </style>
