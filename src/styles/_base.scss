@@ -1,11 +1,11 @@
 // _base.scss: global styles
 
 :root {
-    --primary-color: #12487a;
-    --primary-color-hover: #29649c;
-    --secondary-color: #c9c9c9;
-    --secondary-color-hover: #dddddd;
-    --bg-color: #f0f0f0;
+    --primary-color: #3b6c9b;
+    --primary-color-hover: #1d5183;
+    --secondary-color: #d3d3d3;
+    --secondary-color-hover: #f3f3f3;
+    --bg-color: #f7f7f7;
     --highlight-bg-color: #e2e2e2;
     --font-color: #181818;
     --highlight-font-color: #350e0e;
@@ -20,7 +20,7 @@
         --secondary-color-hover: #3a3a3a;
         --bg-color: #202020;
         --highlight-bg-color: #181818;
-        --font-color: #f0f0f0;
+        --font-color: #f7f7f7;
         --highlight-font-color: #792020;
     }
 }
@@ -31,13 +31,30 @@
     box-sizing: border-box;
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--font-color);
     font-family: var(--font-family);
     user-select: none;
-    padding: .5em;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: .5em;
 }
 
 code {

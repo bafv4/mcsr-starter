@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-const routes = [
+export const routes = [
   {
     path: "/",
     name: "Home",
@@ -11,7 +11,7 @@ const routes = [
     name: "GraalInstallation",
     component: () => import(/* webpackChunkName: "window" */ "./views/GraalInstallation.vue"),
   },
-];
+] as const;
 
 const router = createRouter({
   history: createWebHashHistory(),

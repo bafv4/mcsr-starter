@@ -1,8 +1,5 @@
-# en
+# en (dummy file)
 
 # Global
-next: Next
-back: Back
-
-# Home.vue
-start: Starting MCSR Setup
+next: "次へ"
+back: "戻る"

@@ -1,27 +1,34 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
     primary?: boolean,
     inline?: boolean,
-    width?: number | string,
+    width?: 1 | 2 | 3 | 4,
     disable?: boolean,
 }>(), {
     primary: false,
     inline: false,
-    width: 100,
-    disabled: false,
+    width: 1,
+    disable: false,
 });
 
+const widem = 
+    props.width === 1 ? 8:
+    props.width === 2 ? 16:
+    props.width === 3 ? 24:
+    32;
+
 const emit = defineEmits<{
-  (e: 'navigate', path: string): void
+    (e: 'navigate', path: string): void
 }>();
 
 const onClick = () => {
-  emit('navigate', '/graal');
+    emit('navigate', '');
 }
 </script>
 
 <template>
-    <button class="mss-button" v-bind:class="{primary: primary, inline: inline, disabled: disable}" :style="{ width: width + 'px' }" @click="onClick">
+    <button class="mss-button" v-bind:class="{ primary: props.primary, inline: props.inline, disabled: props.disable }"
+        :style="{ width: widem*16 + 'px' }" @click="onClick">
         <slot></slot>
     </button>
 </template>
@@ -31,7 +38,8 @@ const onClick = () => {
 
 .mss-button {
     display: block;
-    padding: 10px 20px;
+    height: 2.5em;
+    font-size: 1em;
     background-color: $secondary-color;
     color: $font-color;
     border: none;
