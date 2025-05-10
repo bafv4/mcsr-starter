@@ -1,27 +1,35 @@
 // _base.scss: global styles
 
 :root {
-    --primary-color: #3b6c9b;
-    --primary-color-hover: #1d5183;
-    --secondary-color: #d3d3d3;
-    --secondary-color-hover: #f3f3f3;
     --bg-color: #f7f7f7;
     --highlight-bg-color: #e2e2e2;
     --font-color: #181818;
     --highlight-font-color: #350e0e;
     --font-family: 'Segoe UI', 'Meiryo', sans-serif;
+    --shadow-color: rgba(80, 80, 80, 0.3);
+    --primary-color: #3b6c9b;
+    --primary-color-hover: color-mix(in srgb, #3b6c9b, #f7f7f7 20%);
+    --primary-color-active: color-mix(in srgb, #3b6c9b, #f7f7f7 40%);
+    --primary-color-clarity: color-mix(in srgb, #3b6c9b, #181818 30%);
+    --secondary-color: #d3d3d3;
+    --secondary-color-hover: color-mix(in srgb, #d3d3d3, #f7f7f7 20%);
+    --secondary-color-active: color-mix(in srgb, #d3d3d3, #f7f7f7 40%);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #3b6c9b;
-        --primary-color-hover: #275077;
-        --secondary-color: #5e5e5e;
-        --secondary-color-hover: #3a3a3a;
         --bg-color: #202020;
         --highlight-bg-color: #181818;
         --font-color: #f7f7f7;
         --highlight-font-color: #792020;
+        --shadow-color: rgba(8, 8, 8, 0.4);
+        --primary-color: #3b6c9b;
+        --primary-color-hover: color-mix(in srgb, #3b6c9b, #202020 20%);
+        --primary-color-active: color-mix(in srgb, #3b6c9b, #202020 40%);
+        --primary-color-clarity: color-mix(in srgb, #3b6c9b, #f7f7f7 30%);
+        --secondary-color: #5e5e5e;
+        --secondary-color-hover: color-mix(in srgb, #5e5e5e, #202020 20%);
+        --secondary-color-active: color-mix(in srgb, #5e5e5e, #202020 40%);
     }
 }
 
@@ -32,6 +40,7 @@
 }
 
 html {
+    font-size: 16px;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -62,4 +71,25 @@ code {
     padding: .4em;
     border-radius: 0.25em;
     user-select: text;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit;
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
 }

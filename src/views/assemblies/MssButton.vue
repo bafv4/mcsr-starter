@@ -4,18 +4,20 @@ const props = withDefaults(defineProps<{
     inline?: boolean,
     width?: 1 | 2 | 3 | 4,
     disable?: boolean,
+    icon?: string,
 }>(), {
     primary: false,
     inline: false,
     width: 1,
     disable: false,
+    icon: '',
 });
 
-const widem = 
-    props.width === 1 ? 8:
-    props.width === 2 ? 16:
-    props.width === 3 ? 24:
-    32;
+const widem =
+    props.width === 1 ? 8 :
+        props.width === 2 ? 16 :
+            props.width === 3 ? 24 :
+                32;
 
 const emit = defineEmits<{
     (e: 'navigate', path: string): void
@@ -28,18 +30,18 @@ const onClick = () => {
 
 <template>
     <button class="mss-button" v-bind:class="{ primary: props.primary, inline: props.inline, disabled: props.disable }"
-        :style="{ width: widem*16 + 'px' }" @click="onClick">
+        :style="{ width: widem * 16 + 'px' }" @click="onClick">
+        <span v-if="icon" class="material-symbols-outlined">{{ props.icon }}</span>
         <slot></slot>
     </button>
 </template>
 
 <style lang="scss" scoped>
-@use '@/styles/_variables.scss' as *;
-
 .mss-button {
     display: block;
+    margin: 0;
     height: 2.5em;
-    font-size: 1em;
+    font-size: 1rem;
     background-color: $secondary-color;
     color: $font-color;
     border: none;
@@ -48,8 +50,23 @@ const onClick = () => {
     transition: background-color 0.15s ease;
 }
 
+slot {
+    vertical-align: baseline;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin: 0;
+    margin-left: -.25em;
+    margin-right: .1em;
+}
+
 .mss-button:hover {
     background-color: $secondary-color-hover;
+}
+
+.mss-button:active {
+    background-color: $secondary-color-active;
 }
 
 .primary {
@@ -61,9 +78,12 @@ const onClick = () => {
     background-color: $primary-color-hover;
 }
 
+.primary:active {
+    background-color: $primary-color-active;
+}
+
 .inline {
     display: inline-block;
-    margin-right: 1em;
 }
 
 .disabled {

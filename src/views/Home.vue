@@ -1,41 +1,60 @@
 <!-- Home.vue: 開始画面 -->
-
 <script setup lang="ts">
-import MssButton from '@/views/assemblies/MssButton.vue';
-import { useDestStore } from '@/stores/destStore';
 import { useLocaleStore } from '@/stores/localeStore';
 import { useI18n } from 'vue-i18n';
 import { useNavigator } from '@/utils/naviUtils';
+import { useLayout } from '@/views/layouts/useLayout';
+import { useAssembly } from '@/views/assemblies/useAssembly';
 
+const { MssWizard } = useLayout();
+const { MssButton, MssLangSelector, MssIconButton } = useAssembly();
 const { t, locale } = useI18n();
-const destStore = useDestStore();
 const localeStore = useLocaleStore();
 const { to } = useNavigator();
 
 localeStore.setLanguage('ja');
 locale.value = 'ja';
 
-const chooseDest = async () => {
-    const path: string = await window.mssAPIs.selectDest();
-    if (path) {
-        destStore.setDest(path);
-    }
+const openGitHub = () => {
+    window.mssAPIs.openExternal('https://github.com/bafv4/mcsr-starter');
 };
 </script>
 
 <template>
-    <div id="main">
-        <div class="main-pane">
+    <MssWizard>
+        <template #main>
+            <div class="head">
+                <MssIconButton github @click.prevent="openGitHub" class="github-link"></MssIconButton>
+                <MssLangSelector class="lang-selector"></MssLangSelector>
+            </div>
             <h1>{{ t('start') }}</h1>
-            <button @click="chooseDest()">{{ t('select-folder') }}</button>
-        </div>
-        
-        <div class="btn-pane">
-            <MssButton primary inline @navigate="to('/graal/')">{{ t('next') }}</MssButton>
-        </div>
-    </div>
+        </template>
+        <template #btn>
+            <MssButton primary inline @navigate="to('/choose-dest/')">{{ t('next') }}</MssButton>
+        </template>
+    </MssWizard>
 </template>
 
-<style lang="scss">
-@use '@/styles/mss-wizard.scss' as *;
+<style lang="scss" scoped>
+.head {
+    display: inline-block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.lang-selector {
+    display: inline-block;
+    position: sticky;
+    text-align: right;
+    top: 0;
+    right: 0;
+}
+
+.github-link {
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
 </style>

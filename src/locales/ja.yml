@@ -6,4 +6,7 @@ back: "戻る"
 
 # Home.vue
 start: "MCSRのセットアップを始める"
-select-folder: "フォルダを選択"
+
+# ChooseDestination.vue
+select-folder: "フォルダを選択してください..."
+folder-btn-title: "ボタンを押してフォルダを選択"

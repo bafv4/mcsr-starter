@@ -1,4 +1,4 @@
-import { app, BrowserWindow, session, ipcMain, dialog } from 'electron';
+import { app, BrowserWindow, session, ipcMain, dialog, shell } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
 import * as fs from 'fs';
@@ -38,6 +38,8 @@ const createWindow = () => {
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      sandbox: false,
       webSecurity: true,
     },
   });

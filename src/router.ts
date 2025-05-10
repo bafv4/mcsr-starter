@@ -4,12 +4,23 @@ export const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import(/* webpackChunkName: "window" */ "./views/Home.vue"),
+    component: () => import("./views/Home.vue"),
+  },
+  {
+    path: "/choose-dest/",
+    name: "ChooseDestination",
+    component: () => import("./views/ChooseDestination.vue"),
   },
   {
     path: "/graal/",
     name: "GraalInstallation",
-    component: () => import(/* webpackChunkName: "window" */ "./views/GraalInstallation.vue"),
+    component: () => import("./views/GraalInstallation.vue"),
+  },
+  {
+    path: "/err/:errtype",
+    name: "Error",
+    component: () => import("./views/Error.vue"),
+    props: true,
   },
 ] as const;
 
