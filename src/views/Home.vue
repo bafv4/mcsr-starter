@@ -31,6 +31,7 @@ const openGitHub = () => {
             <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
         </template>
         <template #btn>
+            <MssButton icon="Apps" class="tools-btn">{{ t('tools') }}</MssButton>
             <MssButton primary inline @navigate="to('/choose-dest/')">{{ t('next') }}</MssButton>
         </template>
     </MssWizard>
@@ -41,7 +42,7 @@ const openGitHub = () => {
     display: inline-block;
     position: fixed;
     top: 1rem;
-    right: 1rem;
+    right: 1.5rem;
 }
 
 .lang-selector {
@@ -57,5 +58,10 @@ const openGitHub = () => {
     position: sticky;
     top: 0;
     right: 0;
+}
+
+.tools-btn {
+    position: absolute;
+    left: 1.5rem;
 }
 </style>

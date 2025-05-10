@@ -28,6 +28,7 @@ div#layout {
 div#main-pane {
     grid-area: main-pane;
     width: 100%;
+    padding: .5rem 1rem;
 }
 
 // 下部(ボタンエリア)
@@ -38,6 +39,6 @@ div#btn-pane {
     justify-content: end;
     gap: 1rem;
     width: 100%;
-    padding: .25rem 1rem;
+    padding: .5rem 1rem;
 }
 </style>

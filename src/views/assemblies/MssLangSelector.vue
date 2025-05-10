@@ -64,22 +64,18 @@ onBeforeUnmount(() => {
     background: $bg-color;
     border: 1.5px solid $secondary-color;
     border-radius: 4px;
-    min-width: 150px;
+    min-width: 128px;
     box-shadow: 0px 1px 7px 2px $shadow-color;
     z-index: 1000;
     position: absolute;
     right: 0;
+    padding: .25rem;
 }
 
 .dropdown-menu ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.dropdown-menu li {
-    margin-left: .25em;
-    margin-right: .25em;
 }
 
 .dropdown-menu li button {
@@ -128,7 +124,7 @@ onBeforeUnmount(() => {
 /* アニメーション */
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .fade-slide-enter-from,

@@ -8,11 +8,11 @@
     --font-family: 'Segoe UI', 'Meiryo', sans-serif;
     --shadow-color: rgba(80, 80, 80, 0.3);
     --primary-color: #3b6c9b;
-    --primary-color-hover: color-mix(in srgb, #3b6c9b, #f7f7f7 20%);
+    --primary-color-hover: color-mix(in srgb, #3b6c9b, #f7f7f7 30%);
     --primary-color-active: color-mix(in srgb, #3b6c9b, #f7f7f7 40%);
     --primary-color-clarity: color-mix(in srgb, #3b6c9b, #181818 30%);
     --secondary-color: #d3d3d3;
-    --secondary-color-hover: color-mix(in srgb, #d3d3d3, #f7f7f7 20%);
+    --secondary-color-hover: color-mix(in srgb, #d3d3d3, #f7f7f7 30%);
     --secondary-color-active: color-mix(in srgb, #d3d3d3, #f7f7f7 40%);
 }
 
@@ -22,13 +22,13 @@
         --highlight-bg-color: #181818;
         --font-color: #f7f7f7;
         --highlight-font-color: #792020;
-        --shadow-color: rgba(8, 8, 8, 0.4);
+        --shadow-color: rgba(0, 0, 0, 0.4);
         --primary-color: #3b6c9b;
-        --primary-color-hover: color-mix(in srgb, #3b6c9b, #202020 20%);
+        --primary-color-hover: color-mix(in srgb, #3b6c9b, #202020 30%);
         --primary-color-active: color-mix(in srgb, #3b6c9b, #202020 40%);
         --primary-color-clarity: color-mix(in srgb, #3b6c9b, #f7f7f7 30%);
         --secondary-color: #5e5e5e;
-        --secondary-color-hover: color-mix(in srgb, #5e5e5e, #202020 20%);
+        --secondary-color-hover: color-mix(in srgb, #5e5e5e, #202020 30%);
         --secondary-color-active: color-mix(in srgb, #5e5e5e, #202020 40%);
     }
 }

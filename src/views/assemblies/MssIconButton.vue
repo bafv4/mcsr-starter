@@ -31,7 +31,7 @@ withDefaults(defineProps<{
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
-    transition: all .25s;
+    transition: all .2s;
 }
 
 #btn:hover {

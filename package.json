@@ -10,7 +10,8 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "renderer": "npx vite build --config vite.renderer.config.ts"
   },
   "keywords": [],
   "author": {

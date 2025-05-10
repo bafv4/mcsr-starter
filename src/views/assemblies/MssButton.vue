@@ -47,18 +47,20 @@ const onClick = () => {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.15s ease;
+    transition: background-color 0.2s ease;
 }
 
 slot {
-    vertical-align: baseline;
+    vertical-align: middle;
 }
 
 .material-symbols-outlined {
+    font-size: 16px;
     vertical-align: middle;
     margin: 0;
-    margin-left: -.25em;
+    margin-left: -.35em;
     margin-right: .1em;
+    margin-top: -.25rem;
 }
 
 .mss-button:hover {
