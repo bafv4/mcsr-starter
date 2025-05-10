@@ -22,7 +22,7 @@ withDefaults(defineProps<{
 <style lang="scss" scoped>
 #btn {
     margin-right: 0;
-    background-color: $bg-color;
+    background-color: transparent;
     color: $font-color;
     border: none;
     width: 2.5rem;

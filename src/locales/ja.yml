@@ -5,7 +5,8 @@ next: "次へ"
 back: "戻る"
 
 # Home.vue
-start: "MCSRのセットアップを始める"
+start: "MCSR環境のセットアップ"
+github: "GitHubリポジトリを表示"
 
 # ChooseDestination.vue
 select-folder: "フォルダを選択してください..."

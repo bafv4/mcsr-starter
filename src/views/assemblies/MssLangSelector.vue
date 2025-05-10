@@ -31,8 +31,8 @@ const open = ref(false);
 const toggle = () => (open.value = !open.value);
 
 const languages = [
-    { code: 'en', name: 'English' },
     { code: 'ja', name: '日本語' },
+    { code: 'en', name: 'English' },
     // 必要に応じて追加
 ];
 

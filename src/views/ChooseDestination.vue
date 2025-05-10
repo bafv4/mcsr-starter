@@ -13,7 +13,7 @@ const { to } = useNavigator();
 const destStore = useDestStore();
 
 const chooseDest = async () => {
-    const path: string = await window.mssAPIs.selectDest();
+    const path:string = await window.mssAPIs.selectDest();
     if (path) {
         destStore.setDest(path);
     }

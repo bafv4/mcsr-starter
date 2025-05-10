@@ -1,11 +1,9 @@
 import { app, BrowserWindow, session, ipcMain, dialog, shell } from 'electron';
 import path from 'node:path';
 import started from 'electron-squirrel-startup';
-import * as fs from 'fs';
+import pkg from '../package.json';
 
-const packageJsonPath = path.resolve('package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
-const appVersion = packageJson.version;
+const appVersion = pkg.version;
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {

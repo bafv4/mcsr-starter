@@ -34,7 +34,6 @@
 }
 
 * {
-    margin: .25em;
     padding: 0;
     box-sizing: border-box;
 }
@@ -63,7 +62,7 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    padding: .5em;
+    padding: 1em;
 }
 
 code {
@@ -92,4 +91,20 @@ code {
         'wght' 400,
         'GRAD' 0,
         'opsz' 48;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: 1.7rem;
+    max-width: 100%;
+}
+
+h2 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3rem;
+    max-width: 100%;
 }

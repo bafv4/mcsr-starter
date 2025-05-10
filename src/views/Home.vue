@@ -21,13 +21,14 @@ const openGitHub = () => {
 </script>
 
 <template>
+    <div class="head">
+        <MssIconButton github @click.prevent="openGitHub" class="github-link" v-bind:title="t('github')"></MssIconButton>
+        <MssLangSelector class="lang-selector"></MssLangSelector>
+    </div>
     <MssWizard>
         <template #main>
-            <div class="head">
-                <MssIconButton github @click.prevent="openGitHub" class="github-link"></MssIconButton>
-                <MssLangSelector class="lang-selector"></MssLangSelector>
-            </div>
             <h1>{{ t('start') }}</h1>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
         </template>
         <template #btn>
             <MssButton primary inline @navigate="to('/choose-dest/')">{{ t('next') }}</MssButton>
