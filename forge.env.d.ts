@@ -6,3 +6,9 @@ interface Window {
         openExternal: (url: string) => void,
     };
 }
+
+declare module '*.md' {
+  import { ComponentOptions } from 'vue'
+  const component: ComponentOptions
+  export default component
+}

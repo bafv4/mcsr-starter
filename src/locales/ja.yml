@@ -3,11 +3,11 @@
 # Global
 next: "次へ"
 back: "戻る"
+tools: "ツール"
 
 # Home.vue
-start: "MCSR環境のセットアップ"
+home: "ホーム"
 github: "GitHubリポジトリを表示"
-tools: "ツール"
 
 # ChooseDestination.vue
 select-folder: "フォルダを選択してください..."

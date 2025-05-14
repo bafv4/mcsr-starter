@@ -4,7 +4,7 @@
 <!-- ** MssWizard: インストーラ風レイアウトのコンポーネント ** -->
 <template>
     <div id="layout">
-        <div id="main-pane">
+        <div id="main-pane" class="scrollable">
             <slot name="main"></slot>
         </div>
         <div id="btn-pane">
@@ -20,6 +20,7 @@ div#layout {
     grid-template-rows: 1fr max-content;
     grid-template-areas: "main-pane" "btn-pane";
     min-height: 100%;
+    max-height: 100%;
     margin: 0;
     padding: 0;
 }

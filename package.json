@@ -11,7 +11,8 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
     "build": "electron-builder",
-    "renderer": "npx vite build --config vite.renderer.config.ts"
+    "renderer": "npx vite build --config vite.renderer.config.ts",
+    "dev": "npx vite --config vite.renderer.config.ts"
   },
   "keywords": [],
   "author": {
@@ -31,6 +32,7 @@
     "@electron/fuses": "^1.8.0",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/electron-squirrel-startup": "^1.0.2",
+    "@types/markdown-it": "^14.1.2",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
     "@typescript-eslint/parser": "^8.31.1",
     "@vitejs/plugin-vue": "^5.2.3",
@@ -40,6 +42,7 @@
     "eslint-plugin-import": "^2.31.0",
     "gulp": "^5.0.0",
     "gulp-sass": "^6.0.1",
+    "markdown-it": "^14.1.0",
     "sass": "^1.87.0",
     "ts-node": "^10.9.2",
     "typescript": "~5.8.3",

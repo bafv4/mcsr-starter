@@ -4,7 +4,7 @@
     --bg-color: #f7f7f7;
     --highlight-bg-color: #e2e2e2;
     --font-color: #181818;
-    --highlight-font-color: #350e0e;
+    --highlight-font-color: #832019;
     --font-family: 'Segoe UI', 'Meiryo', sans-serif;
     --shadow-color: rgba(80, 80, 80, 0.3);
     --primary-color: #3b6c9b;
@@ -21,7 +21,7 @@
         --bg-color: #202020;
         --highlight-bg-color: #181818;
         --font-color: #f7f7f7;
-        --highlight-font-color: #792020;
+        --highlight-font-color: #bb3e35;
         --shadow-color: rgba(0, 0, 0, 0.4);
         --primary-color: #3b6c9b;
         --primary-color-hover: color-mix(in srgb, #3b6c9b, #202020 30%);
@@ -95,16 +95,50 @@ code {
 
 h1 {
     font-weight: bold;
-    margin: 0;
+    margin: .5em 0 .3em;
     padding: 0;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     max-width: 100%;
 }
 
 h2 {
     font-weight: bold;
-    margin: 0;
+    margin: .3em 0 .2em;
     padding: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     max-width: 100%;
+}
+
+p {
+    margin: .15em 0;
+}
+
+.first {
+    margin-top: 0;
+}
+
+.scrollable {
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 7px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
+    border-radius: 3px;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: $secondary-color-hover;
+}
+
+.scrollable::-webkit-scrollbar-thumb:active {
+    background-color: $secondary-color-active;
 }

@@ -6,9 +6,7 @@
                 <ul>
                     <li v-for="lang in languages" :key="lang.code">
                         <button @click="selectLang(lang.code)" :class="{ active: lang.code === locale }">
-                            <span class="material-symbols-outlined check">
-                                check
-                            </span>
+                            <MssIcon class="material-symbols-outlined check" icon="Check" />
                             <span class="lang-name">{{ lang.name }}</span>
                         </button>
                     </li>
@@ -16,7 +14,6 @@
             </div>
         </transition>
     </div>
-
 </template>
 
 <script lang="ts" setup>
@@ -24,7 +21,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useAssembly } from '@/views/assemblies/useAssembly';
 
-const { MssIconButton } = useAssembly();
+const { MssIconButton, MssIcon } = useAssembly();
 const { locale } = useI18n();
 const dropdownRef = ref<HTMLElement | null>(null);
 const open = ref(false);
@@ -124,12 +121,12 @@ onBeforeUnmount(() => {
 /* アニメーション */
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .fade-slide-enter-from,
 .fade-slide-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-12px);
 }
 </style>

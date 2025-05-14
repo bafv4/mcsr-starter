@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useAssembly } from './useAssembly';
+
 withDefaults(defineProps<{
     icon?: string,
     github?: boolean,
@@ -6,11 +8,13 @@ withDefaults(defineProps<{
     icon: '',
     github: false,
 });
+
+const { MssIcon } = useAssembly();
 </script>
 
 <template>
     <button id="btn">
-        <span v-if="icon" class="material-symbols-outlined">{{ icon }}</span>
+        <MssIcon :icon="icon" v-if="icon" />
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16" v-if="github">
             <path

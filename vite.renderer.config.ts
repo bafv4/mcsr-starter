@@ -5,7 +5,9 @@ import yaml from '@rollup/plugin-yaml';
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
     yaml(),
   ],
   css: {
