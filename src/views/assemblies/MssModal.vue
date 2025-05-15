@@ -86,7 +86,7 @@ onBeforeUnmount(() => {
 
 .info {
     position: fixed;
-    background-color: $highlight-bg-color;
+    background-color: $bg-color;
     border-radius: .5rem;
     border: 1.5px solid $secondary-color;
     box-shadow: 0px 1px 7px 2px $shadow-color;
@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
     top: 50%;
     transform: scale(1) translateX(-50%)translateY(-50%);
     z-index: 1000;
-    margin: .75rem;
+    padding: 1.25rem 1.65rem;
 }
 
 // 閉じるボタン

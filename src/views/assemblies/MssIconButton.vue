@@ -4,9 +4,11 @@ import { useAssembly } from '@/utils/componentUtils';
 withDefaults(defineProps<{
     icon?: string,
     github?: boolean,
+    x?: boolean,
 }>(), {
     icon: '',
     github: false,
+    x: false,
 });
 
 const { MssIcon } = useAssembly();
