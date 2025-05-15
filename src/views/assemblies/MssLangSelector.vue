@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useAssembly } from '@/views/assemblies/useAssembly';
+import { useAssembly } from '@/utils/componentUtils';
 
 const { MssIconButton, MssIcon } = useAssembly();
 const { locale } = useI18n();

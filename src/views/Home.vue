@@ -21,8 +21,7 @@
 import { useLocaleStore } from '@/stores/localeStore';
 import { useI18n } from 'vue-i18n';
 import { useNavigator } from '@/utils/naviUtils';
-import { useLayout } from '@/views/layouts/useLayout';
-import { useAssembly } from '@/views/assemblies/useAssembly';
+import { useLayout, useAssembly } from '@/utils/componentUtils';
 
 const { MssPage } = useLayout();
 const { MssIcon, MssLangSelector, MssIconButton, MarkdownViewer, MssModal } = useAssembly();

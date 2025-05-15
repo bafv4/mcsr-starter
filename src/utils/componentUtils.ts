@@ -4,6 +4,8 @@ import MssIconButton from '@/views/assemblies/MssIconButton.vue'
 import MssIcon from '@/views/assemblies/MssIcon.vue'
 import MarkdownViewer from '@/views/assemblies/MarkdownViewer.vue'
 import MssModal from '@/views/assemblies/MssModal.vue'
+import MssWizard from '@/views/layouts/MssWizard.vue'
+import MssPage from '@/views/layouts/MssPage.vue'
 
 export function useAssembly() {
     return {
@@ -19,5 +21,14 @@ export function useAssembly() {
         MarkdownViewer: MarkdownViewer,
         /** モーダルウィンドウ（風） */
         MssModal: MssModal,
+    };
+}
+
+export function useLayout() {
+    return {
+        /** ## インストーラ風レイアウト */
+        MssWizard: MssWizard,
+        /** ## フルページレイアウト */
+        MssPage: MssPage,
     };
 }

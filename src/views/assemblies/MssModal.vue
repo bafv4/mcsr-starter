@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useAssembly } from './useAssembly';
+import { useAssembly } from '@/utils/componentUtils';
 
 const props = withDefaults(defineProps<{
     icon: string,

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 </script>
 
-<!-- ** MssWizard: インストーラ風レイアウトのコンポーネント ** -->
 <template>
     <div id="layout">
         <slot></slot>

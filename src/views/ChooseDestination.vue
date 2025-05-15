@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useDestStore } from '@/stores/destStore';
-import { useLayout } from './layouts/useLayout';
-import { useAssembly } from './assemblies/useAssembly';
+import { useLayout, useAssembly } from '@/utils/componentUtils';
 
 const { MssWizard } = useLayout();
 const { MssButton, MssIconButton } = useAssembly();

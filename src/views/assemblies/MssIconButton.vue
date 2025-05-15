@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useAssembly } from './useAssembly';
+import { useAssembly } from '@/utils/componentUtils';
 
 withDefaults(defineProps<{
     icon?: string,
