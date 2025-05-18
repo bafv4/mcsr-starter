@@ -1,21 +1,24 @@
 <script lang="ts" setup>
-import { useAssembly } from '@/utils/componentUtils';
+import { useComponent } from '@/utils/component-utils';
 
 withDefaults(defineProps<{
+    /** アイコン名 */
     icon?: string,
+    /** GitHubのロゴマークを表示する場合true */
     github?: boolean,
-    x?: boolean,
+    /** インライン表示? */
+    inline?: boolean,
 }>(), {
     icon: '',
     github: false,
-    x: false,
+    inline: false,
 });
 
-const { MssIcon } = useAssembly();
+const { MssIcon } = useComponent();
 </script>
 
 <template>
-    <button id="btn">
+    <button id="btn" :class="{ 'inline': inline }">
         <MssIcon :icon="icon" v-if="icon" />
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16" v-if="github">
@@ -38,6 +41,10 @@ const { MssIcon } = useAssembly();
     border-radius: 4px;
     cursor: pointer;
     transition: all .2s;
+}
+
+#btn.inline {
+    display: inline-block;
 }
 
 #btn:hover {

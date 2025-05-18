@@ -1,31 +1,6 @@
 <template>
     <div class="head">
-        <MssModal icon="info" style="display: inline-block;" :width="380" :height="270">
-            <h1 class="first"><img src="../../app-icon.png" class="app-icon"></img><span class="info-text">MCSR Starter</span></h1>
-            <table class="info-table">
-                <tbody>
-                    <tr>
-                        <th>{{ t('ver') }}:</th>
-                        <td>v{{ pkg.version }}</td>
-                    </tr>
-                    <tr>
-                        <th>Electron:</th>
-                        <td>{{ pkg.devDependencies.electron }}</td>
-                    </tr>
-                    <tr>
-                        <th>Vue:</th>
-                        <td>{{ pkg.dependencies.vue.replace('^', '') }}</td>
-                    </tr>
-                    <tr>
-                        <th>{{ t('author') }}:</th>
-                        <td>{{ pkg.author.name }}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="info-btns">
-                <MssIconButton github @click="openGitHub" :title="t('github-t')"></MssIconButton>
-            </div>
-        </MssModal>
+        <MssIconButton icon="info" @click="openInfo" />
         <MssLangSelector class="lang-selector" />
     </div>
 
@@ -35,85 +10,90 @@
                 <MssIcon class="home-icon" icon="Home" />
                 <span class="home-title">{{ t('home') }}</span>
             </h1>
-            <MarkdownViewer :src="`ja/home-setup.md`" />
-            <MarkdownViewer :src="`ja/home-tools.md`" />
+            <div class="content">
+                <h2>{{ t('setup') }}</h2>
+                <p>{{ t('home-setup-s1') }}</p>
+                <p>{{ t('home-setup-s2') }}</p>
+                <p>{{ t('home-setup-s3') }}</p>
+                <ul>
+                    <li>{{ t('home-setup-d1') }}</li>
+                    <ul>
+                        <li>{{ t('home-setup-d1-jav') }}</li>
+                        <li>{{ t('home-setup-d1-gra') }}
+                            <MssTooltips :msg="t('sd1-gra-tips')" />
+                        </li>
+                        <li>{{ t('home-setup-d1-obs') }}</li>
+                        <li>{{ t('home-setup-d1-ins') }}</li>
+                        <li>{{ t('home-setup-d1-fab') }}
+                            <MssTooltips :msg="t('sd1-fab-tips')" />
+                        </li>
+                        <li>{{ t('home-setup-d1-ahk') }}
+                            <MssTooltips :msg="t('sd1-ahk-tips')" />
+                        </li>
+                    </ul>
+                    <li>{{ t('home-setup-d2') }}</li>
+                    <ul>
+                        <li><a @click="openLink('https://mods.tildejustin.dev/')">{{ t('home-setup-d2-lis') }}</a></li>
+                    </ul>
+                    <li>{{ t('home-setup-d3') }}</li>
+                    <li>{{ t('home-setup-d4') }}</li>
+                    <ul>
+                        <li>{{ t('home-setup-d4-jin') }}
+                            <MssTooltips :msg="t('sd4-jin-tips')" />
+                        </li>
+                        <li>{{ t('home-setup-d4-nin') }}
+                            <MssTooltips :msg="t('sd4-nin-tips')" />
+                        </li>
+                    </ul>
+                    <li>{{ t('home-setup-d5') }}</li>
+                </ul>
+            </div>
+            <MssWideButton @click="to('/dest/')">{{ t('setup') }}</MssWideButton>
+            <div class="content">
+                <h2>{{ t('tools') }}</h2>
+                <p>{{ t('home-tools-s1') }}</p>
+            </div>
+            <!-- <MssWideButton @click="to('/env/')">{{ t('tools') }}</MssWideButton> -->
         </MssPage>
     </div>
 </template>
 
 <script setup lang="ts">
-import { useLocaleStore } from '@/stores/localeStore';
+import { useLocaleStore } from '@/stores/locale-store';
 import { useI18n } from 'vue-i18n';
-import { useNavigator } from '@/utils/naviUtils';
-import { useLayout, useAssembly } from '@/utils/componentUtils';
-import pkg from '../../package.json';
+import { useNavigator } from '@/utils/navi-utils';
+import { useLayout, useComponent } from '@/utils/component-utils';
+import { modalService } from '@/services/modal-service';
+import Info from '@/components/contents/Info.vue';
 
 const { MssPage } = useLayout();
-const { MssIcon, MssLangSelector, MssIconButton, MarkdownViewer, MssModal } = useAssembly();
+const { MssIcon, MssLangSelector, MssIconButton, MssModal, MssWideButton, MssTooltips } = useComponent();
 const { t, locale } = useI18n();
+const { to, openLink } = useNavigator();
 const localeStore = useLocaleStore();
-const { to } = useNavigator();
 
 localeStore.setLanguage('ja');
 locale.value = 'ja';
 
-const openGitHub = () => {
-    window.mssAPIs.openExternal('https://github.com/bafv4/mcsr-starter');
+const openInfo = () => {
+    modalService.show({
+        content: Info,
+        closable: true,
+    });
 };
 </script>
 
 <style lang="scss" scoped>
 .head {
     display: inline-block;
+    display: flex;
     position: fixed;
+    gap: .25rem;
     top: 1rem;
     right: 2rem;
     vertical-align: middle;
-}
-
-// info box
-.app-icon {
-    display: inline-block;
-    width: .9em;
-    height: .9em;
-    margin-right: .4em;
-    vertical-align: middle;
-}
-.info-text {
-    vertical-align: text-bottom;
-    font-weight: 500;
-    font-size: .8em;
-}
-.info-table {
-    margin-top: .75rem;
-    margin-left: .5rem;
-}
-.info-table tr {
-    margin: .5em;
-    height: 1.85rem;
-}
-.info-table td {
-    padding: .15em;
-}
-.info-table th {
-    text-align: left;
-    padding: .15em;
-    padding-right: 1.5rem;
-    width: max-content;
-}
-.info-btns {
-    display: inline-block;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-}
-
-.lang-selector {
-    display: inline-block;
-    position: sticky;
-    text-align: right;
-    top: 0;
-    right: 0;
+    font-size: 1rem;
+    z-index: 128;
 }
 
 // main
@@ -122,6 +102,7 @@ const openGitHub = () => {
     padding-right: .25em;
     font-size: 1.8rem;
 }
+
 .home-title {
     vertical-align: middle;
 }

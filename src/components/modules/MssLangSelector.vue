@@ -1,12 +1,12 @@
 <template>
     <div class="wrapper" ref="dropdownRef">
-        <MssIconButton icon="translate" @click="toggle"></MssIconButton>
+        <MssIconButton icon="translate" @click="toggle" class="btn" inline />
         <transition name="fade-slide">
             <div v-if="open" class="dropdown-menu">
                 <ul>
                     <li v-for="lang in languages" :key="lang.code">
                         <button @click="selectLang(lang.code)" :class="{ active: lang.code === locale }">
-                            <MssIcon class="material-symbols-outlined check" icon="Check" />
+                            <MssIcon class="check" icon="check" />
                             <span class="lang-name">{{ lang.name }}</span>
                         </button>
                     </li>
@@ -19,9 +19,9 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useAssembly } from '@/utils/componentUtils';
+import { useComponent } from '@/utils/component-utils';
 
-const { MssIconButton, MssIcon } = useAssembly();
+const { MssIconButton, MssIcon } = useComponent();
 const { locale } = useI18n();
 const dropdownRef = ref<HTMLElement | null>(null);
 const open = ref(false);

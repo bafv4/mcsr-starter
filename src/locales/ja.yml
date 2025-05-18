@@ -3,7 +3,12 @@
 # Global
 next: "次へ"
 back: "戻る"
+cancel: "キャンセル"
 tools: "ツール"
+setup: "セットアップ"
+folder-btn-title: "クリックしてフォルダを選択"
+required: "必須"
+optional: "オプション"
 
 # Home.vue
 home: "ホーム"
@@ -12,6 +17,35 @@ author: "作者"
 github: "GitHub"
 github-t: "GitHubリポジトリを表示"
 
+home-setup-s1: "Minecraft 1.16のRTA（RSG、SSG、Ranked）のセットアップができます。"
+home-setup-s2: "セットアップの流れは次の通りです。ダウンロード済の場合はスキップできます。"
+home-setup-s3: "一部は公式ページよりインストーラで取得し、自動で実行します。"
+
+home-setup-d1: "環境・アプリケーション"
+home-setup-d1-jav: "Javaランタイム（JDK）"
+home-setup-d1-gra: "GraalVM"
+home-setup-d1-obs: "OBS"
+home-setup-d1-ins: "インスタンス（起動構成）"
+home-setup-d1-fab: "Fabric Loader"
+home-setup-d1-ahk: "AutoHotKey"
+home-setup-d2: "Mod"
+home-setup-d2-lis: "MCSR Allowed Mod List（許可されているModのリスト）"
+home-setup-d3: "インスタンスの設定"
+home-setup-d4: "外部ツール"
+home-setup-d4-jin: "Jingle"
+home-setup-d4-nin: "NinjabrainBot"
+home-setup-d5: "練習マップ・練習ツール"
+
+sd1-gra-tips: "高パフォーマンスのJDKで、これを使用するとリセット速度向上などが期待できます。"
+sd1-fab-tips: "MinecraftのModローダーで、RTA用のModを入れる場合は必須です。"
+sd1-ahk-tips: "キーボード配置のカスタマイズや簡単なスクリプトの作成が可能です。"
+sd4-jin-tips: "RTAに使える様々な機能が統合されたツールです。"
+sd4-nin-tips: "要塞（Stronghold）の位置を特定するためのツールです。合法です。"
+
+home-tools-s1: "In dev..."
+
 # ChooseDestination.vue
-select-folder: "フォルダを選択してください..."
-folder-btn-title: "ボタンを押してフォルダを選択"
+dest: "セットアップ先を選択"
+dest-s1: "ダウンロードするファイルを配置するフォルダを選択してください。"
+dest-s2: "MultiMC、GraalVM、外部ツールなどはここで選択したフォルダに保存されます。"
+select-folder: "ここをクリックして選択..."

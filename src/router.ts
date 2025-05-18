@@ -7,14 +7,14 @@ export const routes = [
     component: () => import("./views/Home.vue"),
   },
   {
-    path: "/choose-dest/",
+    path: "/dest/",
     name: "ChooseDestination",
     component: () => import("./views/ChooseDestination.vue"),
   },
   {
-    path: "/graal/",
-    name: "GraalInstallation",
-    component: () => import("./views/GraalInstallation.vue"),
+    path: "/env/",
+    name: "Env",
+    component: () => import("./views/EnvInstallation.vue"),
   },
   {
     path: "/err/:errtype",

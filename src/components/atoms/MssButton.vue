@@ -31,7 +31,7 @@ const onClick = () => {
 <template>
     <button class="mss-button" v-bind:class="{ primary: props.primary, inline: props.inline, disabled: props.disable }"
         :style="{ width: widem * 16 + 'px' }" @click="onClick">
-        <span v-if="icon" class="material-symbols-outlined">{{ props.icon }}</span>
+        <span v-if="icon" class="material-symbols-rounded">{{ props.icon }}</span>
         <slot></slot>
     </button>
 </template>
@@ -54,7 +54,7 @@ slot {
     vertical-align: middle;
 }
 
-.material-symbols-outlined {
+.material-symbols-rounded {
     font-size: 16px;
     vertical-align: middle;
     margin: 0;

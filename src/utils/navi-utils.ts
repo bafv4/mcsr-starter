@@ -21,5 +21,7 @@ export function useNavigator() {
          * @param errtype エラータイプ
          */
         err: (errtype: string) => router.push({ name: 'Error', params: { type: `${errtype}`, } }),
+        /** 指定リンクをブラウザで開く */
+        openLink: (link: string) => window.mssAPIs.openExternal(link),
     };
 }

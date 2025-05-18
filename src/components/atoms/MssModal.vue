@@ -6,7 +6,7 @@
         <MssIconButton :icon="icon" @click="toggle" />
         <transition name="fade-zoom">
             <div v-if="open" class="info" :style="`width: ${width}px; height: ${height}px`">
-                <MssIcon icon="close" class="close-btn" @click="hide" v-if="closeBtn" />
+                <MssIcon icon="close" class="close-btn" @click="hide" v-if="closable" />
                 <slot></slot>
             </div>
         </transition>
@@ -15,20 +15,20 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useAssembly } from '@/utils/componentUtils';
+import { useComponent } from '@/utils/component-utils';
 
 const props = withDefaults(defineProps<{
     icon: string,
-    closeBtn?: boolean,
+    closable?: boolean,
     width?: number,
     height?: number,
 }>(), {
-    closeBtn: true,
-    width: 480,
-    height: 360,
+    closable: true,
+    width: 400,
+    height: 250,
 });
 
-const { MssIcon, MssIconButton, MarkdownViewer, MssModal } = useAssembly();
+const { MssIcon, MssIconButton } = useComponent();
 const infoRef = ref<HTMLElement | null>(null);
 const open = ref(false);
 
@@ -39,7 +39,7 @@ const onClickOutside = (e: MouseEvent) => {
     if (
         open.value &&
         !infoRef.value.contains(e.target as Node) &&
-        props.closeBtn
+        props.closable
     ) {
         hide();
     }
@@ -66,18 +66,6 @@ onBeforeUnmount(() => {
     z-index: 100;
     backdrop-filter: blur(2px);
 }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-enter-to,
-.fade-leave-from {
-  opacity: 1;
-}
 
 // info
 .info-wrapper {
@@ -93,22 +81,24 @@ onBeforeUnmount(() => {
     left: 50%;
     top: 50%;
     transform: scale(1) translateX(-50%)translateY(-50%);
-    z-index: 1000;
+    z-index: 999;
     padding: 1.25rem 1.65rem;
 }
 
 // 閉じるボタン
 .close-btn {
     position: absolute;
-    top: .75rem;
-    right: .75rem;
+    top: 1rem;
+    right: 1rem;
     color: $secondary-color;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: color .3s ease;
+    font-variation-settings:
+        'wght' 700,
 }
 .close-btn:hover {
-    color: $highlight-font-color;
+    color: $font-color;
 }
 
 /* アニメーション */

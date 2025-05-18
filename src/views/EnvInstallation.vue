@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useLayout, useAssembly } from '@/utils/componentUtils';
+import { useLayout, useComponent } from '@/utils/component-utils';
 
 const { MssWizard } = useLayout();
-const { MssButton } = useAssembly();
+const { MssButton } = useComponent();
 import { useI18n } from 'vue-i18n';
-import { useNavigator } from '@/utils/naviUtils';
+import { useNavigator } from '@/utils/navi-utils';
 
 const { t } = useI18n();
 const { to } = useNavigator();

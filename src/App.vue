@@ -1,9 +1,12 @@
-<script setup lang="ts">
-</script>
-
 <template>
     <router-view />
+    <ToastContainer />
+    <ModalContainer />
 </template>
 
-<style lang="scss">
-</style>
+<script setup lang="ts">
+import ToastContainer from '@/components/containers/ToastContainer.vue';
+import ModalContainer from '@/components/containers/ModalContainer.vue';
+</script>
+
+<style lang="scss"></style>
