@@ -3,7 +3,7 @@
   "productName": "MCSR Starter",
   "version": "0.0.1",
   "description": "A tool to assist in the installation and configuration of MCSR, including MultiMC (instances), tools, and mods etc.",
-  "main": ".vite/build/main.js",
+  "main": ".vite/build/Main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -65,7 +65,7 @@
       "package.json"
     ],
     "extraMetadata": {
-      "main": ".vite/build/main.js"
+      "main": ".vite/build/Main.js"
     },
     "win": {
       "target": [

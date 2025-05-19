@@ -15,37 +15,40 @@
                 <p>{{ t('home-setup-s1') }}</p>
                 <p>{{ t('home-setup-s2') }}</p>
                 <p>{{ t('home-setup-s3') }}</p>
+
                 <ul>
-                    <li>{{ t('home-setup-d1') }}</li>
+                    <li>{{ t('env-apps') }}</li>
                     <ul>
-                        <li>{{ t('home-setup-d1-jav') }}</li>
-                        <li>{{ t('home-setup-d1-gra') }}
-                            <MssTooltips :msg="t('sd1-gra-tips')" />
+                        <li>{{ t('java') }}</li>
+                        <li>{{ t('graal') }}
+                            <MssTooltips :msg="t('graal-tips')" />
                         </li>
-                        <li>{{ t('home-setup-d1-obs') }}</li>
-                        <li>{{ t('home-setup-d1-ins') }}</li>
-                        <li>{{ t('home-setup-d1-fab') }}
-                            <MssTooltips :msg="t('sd1-fab-tips')" />
+                        <li>{{ t('ahk') }}
+                            <MssTooltips :msg="t('ahk-tips')" />
                         </li>
-                        <li>{{ t('home-setup-d1-ahk') }}
-                            <MssTooltips :msg="t('sd1-ahk-tips')" />
+                        <li>{{ t('obs') }}</li>
+                    </ul>
+                    <li>{{ t('instance') }}</li>
+                    <ul>
+                        <li>{{ t('fabric') }}
+                            <MssTooltips :msg="t('fabric-tips')" />
+                        </li>
+                        <li>{{ t('mods') }}</li>
+                        <ul>
+                            <li><a @click="openLink('https://mods.tildejustin.dev/')">{{ t('mod-list') }}</a></li>
+                        </ul>
+                        <li>{{ t('ins-setting') }}</li>
+                    </ul>
+                    <li>{{ t('external') }}</li>
+                    <ul>
+                        <li>{{ t('jingle') }}
+                            <MssTooltips :msg="t('jingle-tips')" />
+                        </li>
+                        <li>{{ t('ninb') }}
+                            <MssTooltips :msg="t('ninb-tips')" />
                         </li>
                     </ul>
-                    <li>{{ t('home-setup-d2') }}</li>
-                    <ul>
-                        <li><a @click="openLink('https://mods.tildejustin.dev/')">{{ t('home-setup-d2-lis') }}</a></li>
-                    </ul>
-                    <li>{{ t('home-setup-d3') }}</li>
-                    <li>{{ t('home-setup-d4') }}</li>
-                    <ul>
-                        <li>{{ t('home-setup-d4-jin') }}
-                            <MssTooltips :msg="t('sd4-jin-tips')" />
-                        </li>
-                        <li>{{ t('home-setup-d4-nin') }}
-                            <MssTooltips :msg="t('sd4-nin-tips')" />
-                        </li>
-                    </ul>
-                    <li>{{ t('home-setup-d5') }}</li>
+                    <li>{{ t('practice') }}</li>
                 </ul>
             </div>
             <MssWideButton @click="to('/dest/')">{{ t('setup') }}</MssWideButton>

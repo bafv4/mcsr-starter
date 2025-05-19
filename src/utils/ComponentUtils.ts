@@ -5,6 +5,7 @@ import MssIcon from '@/components/atoms/MssIcon.vue'
 import MssWideButton from '@/components/atoms/MssWideButton.vue'
 import MssTooltips from '@/components/atoms/MssTooltips.vue'
 // modules
+import MssCheckList from '@/components/modules/MssCheckList.vue'
 import MssLangSelector from '@/components/modules/MssLangSelector.vue'
 import MssDirSelector from '@/components/modules/MssDirSelector.vue'
 // layouts
@@ -23,6 +24,8 @@ export function useComponent() {
         MssIcon: MssIcon,
         /** 画面幅のボタン */
         MssWideButton: MssWideButton,
+        /** チェックボックスのリスト */
+        MssCheckList: MssCheckList,
         /** フォルダ選択 */
         MssDirSelector: MssDirSelector,
         /** ツールチップ */

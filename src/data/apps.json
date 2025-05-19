@@ -1,0 +1,61 @@
+[
+    {
+        "id": "java",
+        "name": "Java",
+        "resources": [
+            {
+                "ver": "JDK21",
+                "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe",
+                "tag": "installer"
+            },
+            {
+                "ver": "JDK24",
+                "url": "https://download.oracle.com/java/24/latest/jdk-24_windows-x64_bin.exe",
+                "tag": "installer"
+            }
+        ]
+    },
+    {
+        "id": "graal",
+        "name": "GraalVM",
+        "resources": [
+            {
+                "ver": "GraalVM for JDK21",
+                "url": "https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_windows-x64_bin.zip",
+                "tag": "zip"
+            },
+            {
+                "ver": "GraalVM for JDK24",
+                "url": "https://download.oracle.com/graalvm/24/latest/graalvm-jdk-24_windows-x64_bin.zip",
+                "tag": "zip"
+            }
+        ]
+    },
+    {
+        "id": "obs",
+        "name": "OBS",
+        "resources": [
+            {
+                "ver": "",
+                "url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.2-Windows-Installer.exe",
+                "tag": "installer"
+            }
+        ]
+    },
+    {
+        "id": "ahk",
+        "name": "AutoHotKey",
+        "resources": [
+            {
+                "ver": "v2.0",
+                "url": "https://www.autohotkey.com/download/ahk-v2.exe",
+                "tag": "installer"
+            },
+            {
+                "ver": "v1.1",
+                "url": "https://www.autohotkey.com/download/ahk-install.exe",
+                "tag": "installer"
+            }
+        ]
+    }
+]
