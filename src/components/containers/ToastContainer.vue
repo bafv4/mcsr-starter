@@ -38,6 +38,8 @@ const resumeTimer = (id: number) => {
 </script>
 
 <style lang="scss" scoped>
+@use 'sass:color';
+
 .toast-wrapper {
     display: flex;
     position: fixed;
@@ -49,7 +51,6 @@ const resumeTimer = (id: number) => {
 }
 
 .toast {
-    background-color: $highlight-bg-color;
     width: 16rem;
     margin: .5rem;
     padding: .5rem .25rem;
@@ -61,6 +62,12 @@ const resumeTimer = (id: number) => {
     grid-template-rows: 1fr;
     grid-template-areas: "icn msg btn";
     border-left: 3px solid currentColor;
+    background-color: $highlight-bg-alpha;
+    transition: background-color .3s ease;
+}
+
+.toast:hover {
+    background-color: $highlight-bg-color;
 }
 
 .toast.info {

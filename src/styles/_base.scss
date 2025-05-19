@@ -3,6 +3,7 @@
 :root {
     --bg-color: #F3F3F3;
     --highlight-bg-color: #e2e2e2;
+    --highlight-bg-alpha: color-mix(in srgb, #e2e2e2, transparent 30%);
     --font-color: #181818;
     --err-color: #b84840;
     --ok-color: #198375;
@@ -21,6 +22,7 @@
     :root {
         --bg-color: #202020;
         --highlight-bg-color: #181818;
+        --highlight-bg-alpha: color-mix(in srgb, #181818, transparent 30%);
         --font-color: #f7f7f7;
         --err-color: #863731;
         --ok-color: #0e7a6c;

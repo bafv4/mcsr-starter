@@ -96,3 +96,6 @@ dev_docs/
 
 # Electron Builder
 dist/
+
+# Scripts
+scripts/
