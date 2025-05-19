@@ -20,10 +20,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useDestStore } from '@/stores/dest-store';
-import { useLayout, useComponent } from '@/utils/component-utils';
-import { useNavigator } from '@/utils/navi-utils';
-import { useToastService } from '@/services/toast-service';
+import { useDestStore } from '@/stores/DestStore';
+import { useLayout, useComponent } from '@/utils/ComponentUtils';
+import { useNavigator } from '@/utils/NaviUtils';
+import { useToastService } from '@/services/ToastService';
 
 const { MssWizard } = useLayout();
 const { MssButton, MssDirSelector } = useComponent();

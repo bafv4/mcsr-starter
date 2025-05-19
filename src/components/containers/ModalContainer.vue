@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { modalService } from '@/services/modal-service';
+import { modalService } from '@/services/ModalService';
 
 const modal = computed(() => modalService.getState().currentModal);
 const closable = computed(() => modalService.getState().currentModal.closable);

@@ -17,8 +17,8 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue';
-import { useToastService } from '@/services/toast-service';
-import { useComponent } from '@/utils/component-utils';
+import { useToastService } from '@/services/ToastService';
+import { useComponent } from '@/utils/ComponentUtils';
 
 const toastStore = useToastService();
 const { MssIcon } = useComponent();

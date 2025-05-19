@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useComponent } from '@/utils/component-utils';
+import { useComponent } from '@/utils/ComponentUtils';
 
 const { MssIcon } = useComponent();
 

@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useComponent } from '@/utils/component-utils';
+import { useComponent } from '@/utils/ComponentUtils';
 
 const { MssIcon } = useComponent();
 </script>

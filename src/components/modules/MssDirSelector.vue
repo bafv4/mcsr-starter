@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useComponent } from '@/utils/component-utils';
+import { useComponent } from '@/utils/ComponentUtils';
 const { t } = useI18n();
 const { MssIconButton } = useComponent();
 

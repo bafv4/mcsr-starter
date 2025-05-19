@@ -1,3 +1,11 @@
+<template>
+    <button class="mss-button" v-bind:class="{ primary: props.primary, inline: props.inline, disabled: props.disable }"
+        :style="{ width: widem * 16 + 'px' }" @click="onClick">
+        <span v-if="icon" class="material-symbols-rounded">{{ props.icon }}</span>
+        <slot></slot>
+    </button>
+</template>
+
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
     primary?: boolean,
@@ -27,14 +35,6 @@ const onClick = () => {
     emit('navigate', '');
 }
 </script>
-
-<template>
-    <button class="mss-button" v-bind:class="{ primary: props.primary, inline: props.inline, disabled: props.disable }"
-        :style="{ width: widem * 16 + 'px' }" @click="onClick">
-        <span v-if="icon" class="material-symbols-rounded">{{ props.icon }}</span>
-        <slot></slot>
-    </button>
-</template>
 
 <style lang="scss" scoped>
 .mss-button {

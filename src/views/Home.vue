@@ -59,15 +59,15 @@
 </template>
 
 <script setup lang="ts">
-import { useLocaleStore } from '@/stores/locale-store';
+import { useLocaleStore } from '@/stores/LocaleStore';
 import { useI18n } from 'vue-i18n';
-import { useNavigator } from '@/utils/navi-utils';
-import { useLayout, useComponent } from '@/utils/component-utils';
-import { modalService } from '@/services/modal-service';
+import { useNavigator } from '@/utils/NaviUtils';
+import { useLayout, useComponent } from '@/utils/ComponentUtils';
+import { modalService } from '@/services/ModalService';
 import Info from '@/components/contents/Info.vue';
 
 const { MssPage } = useLayout();
-const { MssIcon, MssLangSelector, MssIconButton, MssModal, MssWideButton, MssTooltips } = useComponent();
+const { MssIcon, MssLangSelector, MssIconButton, MssWideButton, MssTooltips } = useComponent();
 const { t, locale } = useI18n();
 const { to, openLink } = useNavigator();
 const localeStore = useLocaleStore();

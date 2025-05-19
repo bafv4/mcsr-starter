@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useComponent } from '@/utils/component-utils';
+import { useComponent } from '@/utils/ComponentUtils';
 
 const { MssIconButton, MssIcon } = useComponent();
 const { locale } = useI18n();

@@ -33,8 +33,8 @@
 <script lang="ts" setup>
 import pkg from '../../../package.json';
 import { useI18n } from 'vue-i18n';
-import { useComponent } from '@/utils/component-utils';
-import { useNavigator } from '@/utils/navi-utils';
+import { useComponent } from '@/utils/ComponentUtils';
+import { useNavigator } from '@/utils/NaviUtils';
 
 const { t } = useI18n();
 const { MssIcon, MssIconButton } = useComponent();
