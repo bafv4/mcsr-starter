@@ -9,13 +9,19 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@renderer/*": [
+        "src/renderer/*"
+      ],
+      "@main/*": [
+        "src/main/*"
+      ],
     },
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "typeRoots": ["./src/@types", "./node_modules/@types"],
+    "typeRoots": [
+      "src/@types",
+      "./node_modules/@types"
+    ],
   }
 }

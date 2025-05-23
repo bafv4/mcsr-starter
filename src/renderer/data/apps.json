@@ -1,0 +1,64 @@
+[
+    {
+        "id": "java",
+        "resources": [
+            {
+                "name": "Oracle JDK",
+                "ver": "21",
+                "url": "https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe",
+                "tag": "installer"
+            },
+            {
+                "name": "Eclipse Adoptium",
+                "ver": "21",
+                "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_x64_windows_hotspot_21.0.7_6.msi",
+                "tag": "installer"
+            }
+        ]
+    },
+    {
+        "id": "graal",
+        "resources": [
+            {
+                "name": "GraalVM for JDK 21",
+                "url": "https://download.oracle.com/graalvm/21/latest/graalvm-jdk-21_windows-x64_bin.zip",
+                "tag": "zip"
+            }
+        ]
+    },
+    {
+        "id": "launcher",
+        "resources": [
+            {
+                "name": "Prism Launcher",
+                "url": "https://github.com/PrismLauncher/PrismLauncher/releases/download/9.4/PrismLauncher-Windows-MSVC-Setup-9.4.exe",
+                "tag": "installer"
+            },
+            {
+                "name": "MultiMC",
+                "url": "https://files.multimc.org/downloads/mmc-develop-win32.zip",
+                "tag": "zip"
+            }
+        ]
+    },
+    {
+        "id": "obs",
+        "resources": [
+            {
+                "name": "OBS",
+                "url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-31.0.2-Windows-Installer.exe",
+                "tag": "installer"
+            }
+        ]
+    },
+    {
+        "id": "ahk",
+        "resources": [
+            {
+                "name": "AutoHotKey",
+                "url": "https://www.autohotkey.com/download/ahk-install.exe",
+                "tag": "installer"
+            }
+        ]
+    }
+]
