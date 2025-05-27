@@ -1,0 +1,56 @@
+# 日本語(ja)
+
+# Global
+next: "次へ"
+back: "戻る"
+cancel: "キャンセル"
+tools: "ツール"
+setup: "セットアップ"
+folder-btn-title: "クリックしてフォルダを選択"
+required: "必須"
+optional: "オプション"
+
+# Home.vue
+home: "ホーム"
+ver: "バージョン"
+author: "作者"
+github: "GitHub"
+github-t: "GitHubリポジトリを表示"
+
+home-setup-s1: "Minecraft 1.16のRTA（RSG、SSG、Ranked）のセットアップができます。"
+home-setup-s2: "セットアップの流れは次の通りです。ダウンロード済の場合はスキップできます。"
+home-setup-s3: "一部は公式ページよりインストーラで取得し、自動で実行します。"
+
+env-apps: "環境・アプリケーション"
+java: "Javaランタイム（JDK）"
+graal: "GraalVM"
+launcher: "ランチャー"
+mmc: "MultiMC"
+prism: "Prism Launcher"
+obs: "OBS"
+ahk: "AutoHotKey"
+instance: "インスタンス（起動構成）"
+fabric: "Fabric Loader"
+mods: "Mod"
+mod-list: "MCSR Allowed Mod List（許可されているModのリスト）"
+ins-setting: "インスタンスの設定"
+external: "外部ツール"
+jingle: "Jingle"
+ninb: "NinjabrainBot"
+practice: "練習マップ・練習ツール"
+
+graal-tips: "高パフォーマンスのJDKで、これを使用するとリセット速度向上などが期待できます。"
+fabric-tips: "MinecraftのModローダーで、RTA用のModを入れる場合は必須です。"
+ahk-tips: "キーボード配置のカスタマイズや簡単なスクリプトの作成が可能です。"
+jingle-tips: "RTAに使える様々な機能が統合されたツールです。"
+ninb-tips: "要塞（Stronghold）の位置を特定するためのツールです。合法です。"
+
+home-tools-s1: "In dev..."
+
+# ChooseDestination.vue
+dest: "セットアップ先を選択"
+dest-s1: "ダウンロードするファイルを配置するフォルダを選択してください。"
+dest-s2: "MultiMC、GraalVM、外部ツールなどはここで選択したフォルダに保存されます。"
+select-folder: "ここをクリックして選択..."
+
+pls-select: "選択してください..."

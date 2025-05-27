@@ -1,0 +1,99 @@
+{
+  "name": "mcsr-starter",
+  "productName": "MCSR Starter",
+  "version": "0.0.1",
+  "description": "A tool to assist in the installation and configuration of MCSR, including MultiMC (instances), tools, and mods etc.",
+  "main": ".vite/build/Main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx .",
+    "build": "npm run package && electron-builder",
+    "dev": "npx vite --config vite.renderer.config.ts"
+  },
+  "keywords": [],
+  "author": {
+    "name": "baf",
+    "email": "yuanqiwei71@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.0",
+    "@electron-forge/maker-deb": "^7.8.0",
+    "@electron-forge/maker-rpm": "^7.8.0",
+    "@electron-forge/maker-squirrel": "^7.8.0",
+    "@electron-forge/maker-zip": "^7.8.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.0",
+    "@electron-forge/plugin-fuses": "^7.8.0",
+    "@electron-forge/plugin-vite": "^7.8.0",
+    "@electron/fuses": "^1.8.0",
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@types/electron-squirrel-startup": "^1.0.2",
+    "@types/markdown-it": "^14.1.2",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "electron": "36.1.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.26.0",
+    "eslint-plugin-import": "^2.31.0",
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "markdown-it": "^14.1.0",
+    "sass": "^1.89.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-router": "^4.5.1"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "axios": "^1.9.0",
+    "electron-dl": "^4.0.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "extract-zip": "^2.0.1",
+    "material-symbols": "^0.31.2",
+    "pinia": "^3.0.2",
+    "sudo-prompt": "^9.2.1",
+    "vue": "^3.5.13",
+    "vue-i18n": "^11.1.3",
+    "vuetify": "^3.8.7"
+  },
+  "build": {
+    "appId": "com.bafv4.mcsr-starter",
+    "productName": "MCSR Starter",
+    "files": [
+      ".vite/build/**/*",
+      ".vite/renderer/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": ".vite/build/Main.js"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "app-icon.ico",
+      "nsis": {
+        "oneClick": false,
+        "perMachine": false,
+        "allowToChangeInstallationDirectory": true
+      }
+    }
+  }
+}
