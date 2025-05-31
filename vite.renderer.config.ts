@@ -1,22 +1,17 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import path from 'path';
 import yaml from '@rollup/plugin-yaml';
+import vuetify from 'vite-plugin-vuetify';
+import path from 'node:path';
 
 export default defineConfig({
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/],
     }),
     yaml(),
+    vuetify(),
   ],
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: `@use "@renderer/styles/_variables.scss" as *;`
-  //     }
-  //   }
-  // },
   resolve: {
     alias: {
       '@renderer': path.resolve(__dirname, 'src/renderer')

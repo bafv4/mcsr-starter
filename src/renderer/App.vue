@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import ToastContainer from '@renderer/components/containers/ToastContainer.vue';
-import ModalContainer from '@renderer/components/containers/ModalContainer.vue';
 import { useTheme } from 'vuetify';
 
 const theme = useTheme();

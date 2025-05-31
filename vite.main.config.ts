@@ -5,7 +5,7 @@ import path from 'path';
 export default defineConfig({
     resolve: {
         alias: {
-            '@main': path.resolve(__dirname, 'src/main')
+            '@main': path.resolve(__dirname, 'src/main'),
         }
     },
     build: {
